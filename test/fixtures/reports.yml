@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  session: MyString
+  date_rep: 2017-08-19
+  duration: 2017-08-19 22:23:59
+
+two:
+  type: 
+  session: MyString
+  date_rep: 2017-08-19
+  duration: 2017-08-19 22:23:59

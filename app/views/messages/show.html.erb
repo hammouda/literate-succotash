@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @message.subject %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @message.content %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @message.type %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @message.parent %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @message.student %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @message.teacher %>
+</p>
+
+<p>
+  <strong>Report:</strong>
+  <%= @message.report %>
+</p>
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>
