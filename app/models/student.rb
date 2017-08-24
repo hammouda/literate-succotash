@@ -1,5 +1,6 @@
 class Student < ApplicationRecord
   belongs_to :classe
-  has_many :remark
+  belongs_to :parent
+  belongs_to :group
   has_many :messages
 end

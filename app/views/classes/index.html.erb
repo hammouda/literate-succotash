@@ -12,13 +12,13 @@
   </thead>
 
   <tbody>
-    <% @classes.each do |class| %>
+    <% @classes.each do |classe| %>
       <tr>
-        <td><%= class.designation %></td>
-        <td><%= class.level %></td>
-        <td><%= link_to 'Show', class %></td>
-        <td><%= link_to 'Edit', edit_class_path(class) %></td>
-        <td><%= link_to 'Destroy', class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= classe.designation %></td>
+        <td><%= classe.level %></td>
+        <td><%= link_to 'Show', classe %></td>
+        <td><%= link_to 'Edit', edit_class_path(classe) %></td>
+        <td><%= link_to 'Destroy', classe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
