@@ -1,31 +1,56 @@
-<p id="notice"><%= notice %></p>
+ <p id="notice"><%= notice %></p>
 
-<h1>Teachers</h1>
+<section class="content-header">
+      <h1>
+        Teachers
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Teachers</li>
+      </ol>
+    </section>
+    <section>
+ <div class="col-md-12">
+          <div class="box">
+            <div class="box-header">
 
-<table>
-  <thead>
-    <tr>
-      <th> name</th>
-      <th>Last name</th>
-      <th>Phone</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+              <div class="box-tools">
+              <%= link_to 'New Teacher', new_teacher_path %>
 
-  <tbody>
-    <% @teachers.each do |teacher| %>
-      <tr>
-        <td><%= teacher.first_name %></td>
-        <td><%= teacher.last_name %></td>
-        <td><%= teacher.phone %></td>
-        <td><%= link_to 'Show', teacher %></td>
-        <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
-        <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <table class="table">
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Phone</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+                <% @teachers.each do |teacher| %>
+                <tr>
+                  <td><%= teacher.first_name %></td>
+                  <td><%= teacher.last_name %></td>
+                  <td><%= teacher.phone %>                   
+                  </td>
+                  <td><%= link_to 'Show', teacher %></td>
+                  <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
+                  <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>  
 
-<br>
+                </tr>
+                 <% end %>
 
-<%= link_to 'New Teacher', new_teacher_path %>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          
+        </div>
+</section>
+
+
+
