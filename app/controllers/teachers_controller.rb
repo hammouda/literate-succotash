@@ -4,7 +4,7 @@ class TeachersController < ApplicationController
   # GET /teachers
   # GET /teachers.json
   def index
-    @teachers = Teacher.all
+    @teachers = Teacher.search(params[:term]).order(:first_name).page(params[:page]).per(10)
   end
 
   # GET /teachers/1
