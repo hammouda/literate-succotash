@@ -2,6 +2,12 @@
 
 <h1>Parents</h1>
 
+<div class="nav navbar-right">
+<%=form_tag(parents_path, method: :get) do %>
+<%= text_field_tag :term, params[:term] %>
+<%=submit_tag :Search  %>
+<% end %>
+</div>
 <table>
   <thead>
     <tr>
@@ -27,7 +33,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= paginate @parents %>
 <br>
 
 <%= link_to 'New Parent', new_parent_path %>

@@ -2,6 +2,12 @@
 
 <h1>Teachers</h1>
 
+<div class="nav navbar-right">
+<%=form_tag(teachers_path, method: :get) do %>
+<%= text_field_tag :term, params[:term] %>
+<%=submit_tag :Search  %>
+<% end %>
+</div
 <table>
   <thead>
     <tr>
@@ -25,7 +31,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= paginate @teachers %>
 <br>
 
 <%= link_to 'New Teacher', new_teacher_path %>

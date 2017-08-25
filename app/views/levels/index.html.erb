@@ -2,6 +2,13 @@
 
 <h1>Levels</h1>
 
+
+<div class="nav navbar-right">
+<%=form_tag(levels_path, method: :get) do %>
+<%= text_field_tag :term, params[:term] %>
+<%=submit_tag :Search  %>
+<% end %>
+</div>
 <table>
   <thead>
     <tr>

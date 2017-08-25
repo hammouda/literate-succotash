@@ -4,7 +4,7 @@ class LevelsController < ApplicationController
   # GET /levels
   # GET /levels.json
   def index
-    @levels = Level.all
+    @levels = Level.search(params[:term])
   end
 
   # GET /levels/1

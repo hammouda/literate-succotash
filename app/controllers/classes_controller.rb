@@ -4,7 +4,7 @@ class ClassesController < ApplicationController
   # GET /classes
   # GET /classes.json
   def index
-    @classes = Classe.all
+    @classes = Classe.search(params[:term])
   end
 
   # GET /classes/1

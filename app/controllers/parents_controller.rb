@@ -4,9 +4,8 @@ class ParentsController < ApplicationController
   # GET /parents
   # GET /parents.json
   def index
-    @parents = Parent.all
+    @parents = Parent.search(params[:term]).order(:first_name).page(params[:page]).per(10)
   end
-
   # GET /parents/1
   # GET /parents/1.json
   def show

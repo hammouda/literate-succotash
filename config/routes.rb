@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+    root "welcome#index"
+  resources :teachings
   resources :teachers
-  resources :homeworks
   resources :messages
   resources :reports
-  resources :remarks
   resources :students
   resources :classes
   resources :levels
