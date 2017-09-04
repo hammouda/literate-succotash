@@ -2,8 +2,23 @@
 
 <h1>Teachings</h1>
 
-<table>
+<table class="table">
+
   <thead>
+<tr><th colspan=2>
+<%=form_tag(teachings_path, method: :get) do %>
+<%= text_field_tag :term, params[:term] ,class:"search-input" %>
+</th><th>
+<%=submit_tag :Search  %>
+<% end %>
+</th>
+<th colspan="3">
+<%= link_to new_teaching_path do %>
+   <%= image_tag "add.png", class: "add" %>
+<% end %>
+</th>
+</tr>
+
     <tr>
       <th>Teacher</th>
       <th>Classe</th>
@@ -26,6 +41,3 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Teaching', new_teaching_path %>
